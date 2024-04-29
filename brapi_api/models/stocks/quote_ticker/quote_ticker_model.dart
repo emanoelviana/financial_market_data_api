@@ -24,7 +24,7 @@ class QuoteTickerModel {
 
   factory QuoteTickerModel.fromMap(Map<String, dynamic> map) {
     return QuoteTickerModel(
-      results: (map['results'] as List<dynamic>?)?.map<ResultsModel>((result) => ResultsModel.fromMap(result)).toList() ?? [],
+      results: map['results'].map<ResultsModel>((result) => ResultsModel.fromMap(result)).toList() ?? <ResultsModel> [],
       requestedAt: map['requestedAt'] ?? '',
       took: map['took'] ?? '',
     );

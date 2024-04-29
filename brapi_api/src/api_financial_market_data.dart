@@ -15,7 +15,7 @@ import '../models/stocks/quote_ticker/quote_ticker_model.dart';
 
 class FinancialMarketApi {
   /// Api Authentication
-  static String token = 'YOUR_API_KEY';
+  static String token = 'vGJ223XSF2bvzY6hjT4nsN';
   final header = {'Authorization': 'Bearer $token'};
 
   /// Api Handler
@@ -65,7 +65,6 @@ class FinancialMarketApi {
   Future<Crypto> getCrypto({required String coin}) async {
     final response = await http.get(Uri.parse('${handler}v2/crypto?coin=$coin'),
         headers: header);
-    print(response.body);
     final map = jsonDecode(response.body);
     final obj = Crypto.fromMap(map);
     return obj;
