@@ -127,7 +127,7 @@ class ResultsModel {
       fiftyTwoWeekLow: (map['fiftyTwoWeekLow'] ?? 0),
       fiftyTwoWeekHigh: (map['fiftyTwoWeekHigh'] ?? 0),
       symbol: (map['symbol'] ?? ''),
-      financialData: FinancialDataModel.fromMap(map['financialData'] ?? <FinancialDataModel>{})
+      financialData: FinancialDataModel.fromMap(map['financialData'] ?? {})
     );
   }
 
