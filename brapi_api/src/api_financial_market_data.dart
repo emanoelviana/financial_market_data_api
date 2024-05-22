@@ -63,7 +63,7 @@ class FinancialMarketApi {
 
   // * Get Crypto Data
   Future<Crypto> getCrypto({required String coin}) async {
-    final response = await http.get(Uri.parse('${handler}v2/crypto?coin=$coin'),
+    final response = await http.get(Uri.parse('${handler}v2/crypto?coin=$coin&currenct=BRL'),
         headers: header);
     final map = jsonDecode(response.body);
     final obj = Crypto.fromMap(map);
